@@ -1,0 +1,16 @@
+name: Release Workflow
+on:
+  repository_dispatch:
+    types: [ semantic-release ]
+jobs:
+  release:
+    name: Release Job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: uamanager/fictus/.github/workflows/setup-test-build.yml@master
+
+      - name: Release Step
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn semantic-release

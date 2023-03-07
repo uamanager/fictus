@@ -1,0 +1,19 @@
+name: Test and Build Workflow
+
+on: [ push, pull_request ]
+
+jobs:
+  test-build:
+    name: Test and Build Job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: uamanager/fictus/.github/workflows/setup-env.yml
+
+      - name: Lint Step
+        run: yarn lint
+
+      - name: Test Step
+        run: yarn test:ci
+
+      - name: Build Step
+        run: yarn build:prod

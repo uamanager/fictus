@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@fictus/cli": ["packages/cli/src/index.ts"],
+      "@fictus/cypress": ["packages/cypress/src/index.ts"],
       "@fictus/db": ["packages/db/src/index.ts"],
       "@fictus/schematics": ["packages/schematics/src/index.ts"],
       "@fictus/server": ["packages/server/src/index.ts"]

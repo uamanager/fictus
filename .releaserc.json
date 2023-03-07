@@ -82,6 +82,12 @@
     [
       "@semantic-release/npm",
       {
+        "pkgRoot": "packages/cypress"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
         "pkgRoot": "packages/server"
       }
     ],
@@ -113,6 +119,10 @@
           {
             "path": "dist/packages/schematics/**",
             "label": "@fictus/schematics"
+          },
+          {
+            "path": "dist/packages/cypress/**",
+            "label": "@fictus/cypress"
           },
           {
             "path": "dist/packages/server/**",

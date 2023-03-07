@@ -67,6 +67,7 @@ body:
         - label: "I don't know. Or some 3rd-party package"
         - label: "<code>@fictus/cli</code>"
         - label: "<code>@fictus/schematics</code>"
+        - label: "<code>@fictus/cypress</code>"
         - label: "<code>@fictus/server</code>"
         - label: "<code>@fictus/db</code>"
         - label: "Other (see below)"

@@ -1,0 +1,129 @@
+{
+  "ci": true,
+  "tagFormat": "v${version}",
+  "branches": [
+    "master",
+    {
+      "name": "beta",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits",
+        "parserOpts": {
+          "noteKeywords": [
+            "BREAKING CHANGE",
+            "BREAKING CHANGES",
+            "BREAKING"
+          ]
+        },
+        "releaseRules": [
+          {
+            "type": "docs",
+            "release": "patch"
+          },
+          {
+            "type": "refactor",
+            "release": "patch"
+          },
+          {
+            "type": "style",
+            "release": "patch"
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits",
+        "parserOpts": {
+          "noteKeywords": [
+            "BREAKING CHANGE",
+            "BREAKING CHANGES",
+            "BREAKING"
+          ]
+        },
+        "writerOpts": {
+          "commitsSort": [
+            "subject",
+            "scope"
+          ]
+        }
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "packages/cli"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "packages/schematics"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "packages/server"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "packages/db"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "packages/**/package.json",
+          "CHANGELOG.md",
+          "package.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/packages/cli/**",
+            "label": "@fictus/cli"
+          },
+          {
+            "path": "dist/packages/schematics/**",
+            "label": "@fictus/schematics"
+          },
+          {
+            "path": "dist/packages/server/**",
+            "label": "@fictus/server"
+          },
+          {
+            "path": "dist/packages/db/**",
+            "label": "@fictus/db"
+          }
+        ]
+      }
+    ]
+  ]
+}

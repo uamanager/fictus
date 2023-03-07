@@ -16,8 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "lts/*"
-
-      - uses: c-hive/gha-yarn-cache@v2
+          cache: 'yarn'
 
       - name: Install Dependencies Step
         run: yarn install

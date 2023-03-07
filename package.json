@@ -35,10 +35,13 @@
     "build:cli:prod": "nx run cli:build:prod",
     "build:schematics": "nx run schematics:build",
     "build:schematics:prod": "nx run schematics:build:prod",
+    "build:cypress": "nx run cypress:build",
+    "build:cypress:prod": "nx run cypress:build:prod",
     "build:server": "nx run server:build",
     "build:server:prod": "nx run server:build:prod",
     "build:db": "nx run db:build",
-    "build:db:prod": "nx run db:build:prod"
+    "build:db:prod": "nx run db:build:prod",
+    "format": "nx format:write"
   },
   "dependencies": {
     "tslib": "^2.3.0"

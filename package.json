@@ -68,7 +68,7 @@
     "@semantic-release/npm": "9.0.2",
     "@semantic-release/release-notes-generator": "10.0.3",
     "@types/jest": "29.5.1",
-    "@types/node": "18.16.10",
+    "@types/node": "18.16.12",
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
     "esbuild": "0.17.19",

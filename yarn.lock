@@ -2915,7 +2915,23 @@
     semver "^7.1.2"
     tempy "^3.0.0"
 
-"@semantic-release/release-notes-generator@12.0.0", "@semantic-release/release-notes-generator@^12.0.0":
+"@semantic-release/release-notes-generator@12.0.1":
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/@semantic-release/release-notes-generator/-/release-notes-generator-12.0.1.tgz#85a5e0b5f1df055c2e285590f142496e31146cfd"
+  integrity sha512-/xsl+XXMsDJCQt7Jvvtx/saHDrgWAgqtB3Vjjt8pOqaMcjDLdbdeN6K+rV7hTnQYhnvbnL9FkloVsplyRqYGtA==
+  dependencies:
+    conventional-changelog-angular "^7.0.0"
+    conventional-changelog-writer "^7.0.0"
+    conventional-commits-filter "^4.0.0"
+    conventional-commits-parser "^5.0.0"
+    debug "^4.0.0"
+    get-stream "^7.0.0"
+    import-from "^4.0.0"
+    into-stream "^7.0.0"
+    lodash-es "^4.17.21"
+    read-pkg-up "^11.0.0"
+
+"@semantic-release/release-notes-generator@^12.0.0":
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/release-notes-generator/-/release-notes-generator-12.0.0.tgz#1882d6d797e1176b9f836caf7ed787325c8ddb4b"
   integrity sha512-m7Ds8ComP1KJgA2Lke2xMwE1TOOU40U7AzP4lT8hJ2tUAeicziPz/1GeDFmRkTOkMFlfHvE6kuvMkvU+mIzIDQ==
@@ -5261,6 +5277,11 @@ finalhandler@1.2.0:
     parseurl "~1.3.3"
     statuses "2.0.1"
     unpipe "~1.0.0"
+
+find-up-simple@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/find-up-simple/-/find-up-simple-1.0.0.tgz#21d035fde9fdbd56c8f4d2f63f32fd93a1cfc368"
+  integrity sha512-q7Us7kcjj2VMePAa02hDAF6d+MzsdsAWEwYyOpwUtlerRBkOEPBCRZrAV4XfcSN8fHAgaD0hP7miwoay6DCprw==
 
 find-up@^2.0.0:
   version "2.1.0"
@@ -8729,6 +8750,15 @@ read-pkg-up@^10.0.0:
     read-pkg "^8.0.0"
     type-fest "^3.12.0"
 
+read-pkg-up@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-11.0.0.tgz#8916ffc6af2a7538b43bcc2c6445d4450ffe5a74"
+  integrity sha512-LOVbvF1Q0SZdjClSefZ0Nz5z8u+tIE7mV5NibzmE9VYmDe9CaBbAVtz1veOSZbofrdsilxuDAYnFenukZVp8/Q==
+  dependencies:
+    find-up-simple "^1.0.0"
+    read-pkg "^9.0.0"
+    type-fest "^4.6.0"
+
 read-pkg-up@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-7.0.1.tgz#f3a6135758459733ae2b95638056e1854e7ef507"
@@ -9009,10 +9039,10 @@ saxes@^6.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-semantic-release@22.0.6:
-  version "22.0.6"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-22.0.6.tgz#47703042883651ed3f991ad80da8a2e6e80f8569"
-  integrity sha512-SxgpGR6b52gaKrb42nnaZWa2h5ig06XlloS3NjUN4W/lRBB8SId4JMaZaxN6Ncb+Ii2Uxd8WO6uvshTSSf8XRg==
+semantic-release@22.0.7:
+  version "22.0.7"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-22.0.7.tgz#9ca7cba742ff54f861f983977898b6073bba9c4d"
+  integrity sha512-Stx23Hjn7iU8GOAlhG3pHlR7AoNEahj9q7lKBP0rdK2BasGtJ4AWYh3zm1u3SCMuFiA8y4CE/Gu4RGKau1WiaQ==
   dependencies:
     "@semantic-release/commit-analyzer" "^11.0.0"
     "@semantic-release/error" "^4.0.0"
@@ -9036,7 +9066,7 @@ semantic-release@22.0.6:
     micromatch "^4.0.2"
     p-each-series "^3.0.0"
     p-reduce "^3.0.0"
-    read-pkg-up "^10.0.0"
+    read-pkg-up "^11.0.0"
     resolve-from "^5.0.0"
     semver "^7.3.2"
     semver-diff "^4.0.0"
